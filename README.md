@@ -71,15 +71,28 @@ Fill out the following table, mapping decimal numbers `0` through `15` to their 
 |---------|------------------------|
 | 0       | 0000                   |
 | 1       | 0001                   |
-| ...     | ...                    |
-| 15      | ????                   |
+| 2       | 0010                   |
+| 3       | 0011                   |
+| 4       | 0100                   |
+| 5       | 0101                   |
+| 6       | 0110                   | 
+| 7       | 0111                   |
+| 8       | 1000                   |
+| 9       | 1001                   |
+| 10      | 1010                   |
+| 11      |1011                    |
+| 12      | 1100                   |
+| 13      | 1101                   |
+| 14      | 1110                   |
+| 15      | 1111                   |
+ 
 
 **How many binary digits (bits) are needed?**
 
 Explain how to calculate the number of bits required:
 <details>
 <summary>Your Answer</summary>
-Erase this text and write your answer here!
+Für die Darstellung der Nummer von 0 bis 15 schreiben wir 16 Zahlen so N=16 jedoch N=2^n mit n als die Anzahl von Bits . Das heisst n=Log₂(N)=L og₂(16). Endlich ergibt sich n=4 
 </details>
 
 ---
@@ -106,15 +119,28 @@ Refer to the truth table of a 1-bit full adder:
 
 #### Your Task
 Create a truth table for a **2-bit adder** without carry-in. What are the possible inputs and outputs?
+|A<sub>1</sub>   |    A<sub>0</sub>    |    B<sub>1</sub>    |    B<sub>0</sub>   |    C<sub>out</sub>    |    Q<sub>1</sub>  |    Q<sub>0</sub>  | Summe |
+|----            |----------           |----------           |----------          |-----------------------|---------          |---------          |------ |
+|0               |    0                |    0                |    0               |    0                  |    0              |    0              | 00    |
+|0               |    0                |    0                |    1               |    0                  |    0              |    1              | 01    |
+|0               |    0                |    1                |    0               |    0                  |    1              |    0              | 10    |
+|0               |    0                |    1                |    1               |    0                  |    1              |    1              | 11    |
+|0               |    1                |    0                |    0               |    0                  |    0              |    1              | 01    |
+|0               |    1                |    0                |    1               |    0                  |    1              |    0              | 10    |
+|0               |    1                |    1                |    0               |    0                  |    1              |    1              | 11    |
+|0               |    1                |    1                |    1               |    1                  |    0              |    0              | 00    |   
+|1               |    0                |    0                |    0               |    0                  |    1              |    0              | 10    |
+|1               |    0                |    0                |    1               |    0                  |    1              |    1              | 11    |
+|1               |    0                |    1                |    0               |    0                  |    1              |    1              | 11    |
+|1               |    0                |    1                |    1               |    0                  |    1              |    1              | 11    |
+|1               |    1                |    0                |    0               |    1                  |    0              |    0              | 00    |
+|1               |    1                |    0                |    1               |    1                  |    0              |    1              | 01    |
+|1               |    1                |    1                |    0               |    0                  |    1              |    1              | 11    |
+|1               |    1                |    1                |    1               |    1                  |    0              |    0              | 00    |
 
->   Your
->
->   table
->
->   goes
->
->   here!
+Die mögliche Eingänge sind A₁,A₀,B₁ und B₀ und die Ausgänge sind Cout ,S₁ und S₀.
 
+ 
 ---
 
 ### Task 3: Boolean Equations via Karnaugh Maps
@@ -128,22 +154,21 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
 <details>
 <summary>The final functions</summary>
 
-Q<sub>0</sub> = .......
+Q<sub>0</sub> = ( not B0 and A0) or( B0 and not A0)
 
-Q<sub>1</sub> = .......
+Q<sub>1</sub> =(B1 and not B0 and not A1) or(B1 and not A1 and not A0) or (not B1 and A1 and not A0) or (not B1 and not B0 and A1)or (B1 and B0 and A1 and A0) or( not B1 and B0 and not A1 and A0)
 
-C<sub>out</sub> = .......
+C<sub>out</sub> = (B1 and A1) or (B1 and B0 and A0) or (B0 and A1 and A0)
 
 </details>
 
 ---
 
 ### Task 4: Circuit Implementation
-Using your Boolean equations, build a logic network in [CircuitVerse](https://circuitverse.org) that implements at least one bit of the adder.
-
+Using your Boolean equations, build a logic network in [CircuitVerse](https://circuitverse.org) that implements at least one bit of the adder
 <details>
 <summary>Your solution</summary>
-A share link to your solution goes here: <a href=".................">Link!</a>
+A share link to your solution goes here:[CircuitVerse] (https://circuitverse.org/users/306412/projects/oceane-circuit)
 </details>
 
 ---
