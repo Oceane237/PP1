@@ -71,7 +71,7 @@ Fill out the following table, mapping decimal numbers `0` through `15` to their 
 |---------|------------------------|
 | 0       | 0000                   |
 | 1       | 0001                   |
-| ...     | ...                    |
+| 2...     | ...                    |
 | 15      | ????                   |
 
 **How many binary digits (bits) are needed?**
